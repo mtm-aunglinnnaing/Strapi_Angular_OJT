@@ -1,0 +1,43 @@
+.fixTableHead {
+  overflow-y: auto;
+  height: 600px;
+  position: relative;
+  // overflow: auto;
+  border: 1px solid black;
+  thead th {
+    position: sticky;
+    top: 0;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    text-align: left;
+    background-color: #624eb6;
+    color: white;
+  }
+  .sticky-header {
+    position: sticky;
+    background: white;
+    left: 0;
+    z-index: 1;
+  }
+  .sticky-left {
+    position: sticky;
+    background: white;
+    left: 0px;
+  }
+  .table {   
+    td, th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    .grid-item {
+      height: 50px;
+      border: 1px solid gray;
+    }
+    .cell-size {
+      overflow: auto;
+    }
+  }
+}

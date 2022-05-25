@@ -1,0 +1,25 @@
+<div class="table-container">
+  <h2 *ngIf="caption">{{caption}}</h2>
+  <div class="fixTableHead">
+    <table class="table">
+      <thead class="table-header">
+        <tr>
+          <th *ngFor="let key of keys" [class.sticky-header]="key.sticky">{{key.header}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of records | paginate: config">
+          <td *ngFor="let key of keys" [class.sticky-left]="key.sticky">
+            <div [innerHTML]="record[key.primaryKey] | formatCell:key.format" [style]="styleExpression"
+              class="cell-size">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  <div style="text-align:center" class="pagination">
+    <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+  </div>
+</div>

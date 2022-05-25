@@ -1,0 +1,19 @@
+<div class="order-container">
+  <h2>Testing rich text editor</h2>
+  <div class="container">
+    <header class="header">
+      <h1>AngularEditor</h1>
+      <p>Native rich text editor for Angular 6+</p>
+    </header>
+    <angular-editor [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+
+    <input type="file" class="select-files-form" accept="image/*"
+      (change)="onChangeFileInput($event)" />
+    <!-- <h5 class="html-header">HTML Output</h5> -->
+    <!-- <div class="html">
+      {{ htmlContent }}
+    </div> -->
+
+    <button class="search" mat-raised-button (click)="submitTextEditor()" color="primary">Submit Data</button>
+  </div>
+</div>

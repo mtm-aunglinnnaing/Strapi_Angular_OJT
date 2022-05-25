@@ -1,0 +1,53 @@
+.header {
+  padding: 30px;
+  background: #624eb6;
+  color: white;
+  .description {
+      width: 80%;
+      margin: 0 auto;
+      span {
+          font-size: 20px;
+          font-weight: bold;
+          margin-right: 30px;
+          cursor: pointer;
+      }
+      a {
+          color: white;
+          padding: 30px 10px;
+          font-weight: bold;
+      }
+      .right-side {
+          text-decoration: underline;
+          cursor: pointer;
+          float: right;
+          font-size: 14px;
+      }
+  }    
+}
+.main {
+  min-height: 575px;
+  width: 80%;
+  margin: 0 auto;
+}
+.footer {
+  position: relative;;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  width: 100%;
+  background: #624eb6;
+  margin-top: 7px;
+  .footer-description {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px 30px 35px 30px;
+      .company-name {
+        color: white;
+          float: left;
+          text-decoration: none;
+      }
+      .copyright {
+          float: right;
+      }
+  }
+}

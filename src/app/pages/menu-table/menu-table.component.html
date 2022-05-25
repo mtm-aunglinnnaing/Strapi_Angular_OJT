@@ -1,0 +1,7 @@
+<div>
+
+  <app-table-layout *ngIf="this.config.totalItems > 0" [records]="menuLists" [config]="config"
+    [caption]="'Menu Lists'" [keys]="columnSettings" [styleExpression]="'width: 250px'"
+    (paginateFunc)="paginateFunc($event)">
+  </app-table-layout>
+</div>

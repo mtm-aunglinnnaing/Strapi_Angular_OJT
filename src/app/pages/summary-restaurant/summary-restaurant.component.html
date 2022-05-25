@@ -1,0 +1,21 @@
+<div class="container">
+  <div>
+    <form [formGroup]="orderForm" class="ContentsContainer--4">
+      <div class="section">
+        <h4>Please, Choose Date Range</h4>
+        <mat-form-field appearance="outline">
+          <mat-label>Choose Date</mat-label>
+          <mat-select formControlName="date">
+            <mat-option *ngFor="let date of dateFilter" [value]="date.value">{{ date.label }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button class="search" mat-raised-button (click)="searchSummary()" color="primary">Search Summary</button>
+      </div>
+
+      <app-table-layout *ngIf="this.config.totalItems > 0" [records]="restaurantData" [config]="config" [caption]="'Restaurant Lists'"
+        [keys]="columnSettings" [styleExpression]="'width: 180px; height: 50px'" (paginateFunc)="paginateFunc($event)">
+      </app-table-layout>
+    </form>
+  </div>
+</div>
